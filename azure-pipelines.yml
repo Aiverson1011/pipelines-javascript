@@ -23,3 +23,8 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs: 
     pathtoPublish: $(Build.ArtifactStagingDirectory) # dist or build files
+    
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    includeRootFolder: false
